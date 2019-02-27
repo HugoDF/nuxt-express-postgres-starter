@@ -1,9 +1,11 @@
 FROM node:10
 
-COPY . /home/app
-
 WORKDIR /home/app
 
+COPY ./package* ./
+
 RUN npm install --production
+
+COPY . .
 
 CMD npm start
