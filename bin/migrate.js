@@ -28,4 +28,7 @@ new Promise((resolve, reject) => {
 }).then(() => {
   console.log(`migrations "${command}" successfully ran`)
   process.exit(0)
-}).catch(() => process.exit(1))
+}).catch((err) => {
+  console.error(err.stack)
+  process.exit(1)
+})
