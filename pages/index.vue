@@ -9,10 +9,16 @@
         A full-stack starter project with Nuxt, Express and Postgres
       </h2>
       <div class="links">
+        <nuxt-link class="button is-medium is-light" to="/login">
+          Login
+        </nuxt-link>
+        <nuxt-link class="button is-medium is-light" to="/signup">
+          Signup
+        </nuxt-link>
         <a
           href="https://github.com/HugoDF/nuxt-express-postgres-starter"
           target="_blank"
-          class="button--grey"
+          class="button is-medium is-primary"
         >GitHub</a>
       </div>
     </div>
@@ -29,7 +35,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .container {
   margin: 0 auto;
   min-height: 100vh;

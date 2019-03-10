@@ -14,10 +14,10 @@ services:
     command: npm run dev
     volumes:
       - .:/home/app/
-      - ./node_modules:/home/app/node_modules
+      - /home/app/node_modules
 
   postgres:
-    image: postgres:11
+    image: postgres:10.4
     ports:
       - "35432:5432"
     environment:

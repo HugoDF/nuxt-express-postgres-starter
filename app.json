@@ -1,0 +1,5 @@
+{
+  "dokku": {
+    "predeploy": "npm run migrate up"
+  }
+}

@@ -19,16 +19,18 @@ new Promise((resolve, reject) => {
       if (typeof set[command] !== 'function') {
         reject(new Error('Command is not a function'))
       }
-      set[command](function (err) {
+      set[command](function(err) {
         if (err) reject(err)
         resolve()
       })
     }
   )
-}).then(() => {
-  console.log(`migrations "${command}" successfully ran`)
-  process.exit(0)
-}).catch((err) => {
-  console.error(err.stack)
-  process.exit(1)
 })
+  .then(() => {
+    console.log(`migrations "${command}" successfully ran`)
+    process.exit(0)
+  })
+  .catch(err => {
+    console.error(err.stack)
+    process.exit(1)
+  })

@@ -1,0 +1,8 @@
+@import "~bulma/sass/utilities/_all";
+
+// Set your colors
+$primary: #3b8070;
+$primary-invert: findColorInvert($primary);
+
+@import "~bulma";
+@import "~buefy/src/scss/buefy";
