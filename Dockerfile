@@ -5,7 +5,7 @@ ENV HOST 0.0.0.0
 ARG API_URL
 ARG API_URL_BROWSER
 
-WORKDIR /home/app
+WORKDIR /app
 
 COPY ./package.json .
 COPY ./package-lock.json .
