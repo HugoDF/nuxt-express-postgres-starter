@@ -1,5 +1,7 @@
-{
-  "dokku": {
-    "predeploy": "npm run migrate up"
+{ 
+  "scripts": {
+    "dokku": {
+      "predeploy": "npm run migrate up"
+    }
   }
 }
