@@ -1,4 +1,4 @@
-const Session = require('../persistence/sessions')
+const Session = require('../db/sessions')
 
 const sessionMiddleware = async (req, res, next) => {
   if (!req.session.id) {

@@ -1,6 +1,6 @@
 const sql = require('sql-template-strings')
 const uuid = require('uuid/v4')
-const db = require('../db/db')
+const db = require('./db')
 
 module.exports = {
   async create(userId) {

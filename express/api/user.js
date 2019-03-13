@@ -1,5 +1,5 @@
 const { Router } = require('express')
-const User = require('../persistence/users')
+const User = require('../db/users')
 
 const router = new Router()
 
