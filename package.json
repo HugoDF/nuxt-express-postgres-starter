@@ -22,6 +22,7 @@
     "cross-env": "^5.2.0",
     "helmet": "^3.15.1",
     "migrate": "^1.6.2",
+    "morgan": "^1.9.1",
     "nuxt": "^2.4.0",
     "nuxt-express-module": "0.0.11",
     "pg": "^7.8.1",

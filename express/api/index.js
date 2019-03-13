@@ -1,6 +1,7 @@
 const express = require('express')
 const { Router } = express
 const router = Router()
+const morgan = require('morgan')
 const clientSession = require('client-sessions')
 const helmet = require('helmet')
 
@@ -9,6 +10,7 @@ const { SESSION_SECRET } = require('../config')
 const user = require('./user')
 const session = require('./session')
 
+router.use(morgan('short'))
 router.use(express.json())
 router.use(
   clientSession({
