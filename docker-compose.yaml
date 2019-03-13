@@ -13,8 +13,8 @@ services:
       - "3000:3000"
     command: npm run dev
     volumes:
-      - .:/home/app/
-      - /home/app/node_modules
+      - .:/app/
+      - /app/node_modules
 
   postgres:
     image: postgres:10.4
