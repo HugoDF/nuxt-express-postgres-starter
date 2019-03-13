@@ -2,7 +2,7 @@
   <nav class="navbar" role="navigation" aria-label="main navigation">
     <div class="navbar-start">
       <nuxt-link to="/" class="navbar-item">
-        <Logo height="20px" />
+        Nuxt Starter
       </nuxt-link>
       <a
         class="navbar-item"
