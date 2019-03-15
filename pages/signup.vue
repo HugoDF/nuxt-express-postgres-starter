@@ -7,12 +7,13 @@
             Sign up
           </h1>
           <b-field label="Email">
-            <b-input v-model="email" type="email" use-html5-validation />
+            <b-input v-model="email" type="email" use-html5-validation required />
           </b-field>
           <b-field label="Password" :type="passwordError && 'is-danger'" :message="passwordError">
             <b-input
               v-model="password"
               type="password"
+              required
               @focus="checkPasswords('focus')"
               @blur="checkPasswords('blur')"
             />
@@ -22,6 +23,7 @@
             <b-input
               v-model="confirmPassword"
               type="password"
+              required
               @focus="checkPasswords('focus')"
               @blur="checkPasswords('blur')"
             />
@@ -86,6 +88,9 @@ export default {
       }
     },
     submitSignup(e) {
+      if (!this.email || !this.password) {
+        return this.$toast.open('Please provide an email and passowrd')
+      }
       e.preventDefault()
       this.$axios
         .$post('/api/users', {
